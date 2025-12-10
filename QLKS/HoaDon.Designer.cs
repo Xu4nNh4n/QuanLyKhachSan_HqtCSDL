@@ -34,9 +34,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1008, 535);
+            this.ClientSize = new System.Drawing.Size(1281, 646);
             this.Name = "HoaDon";
             this.Text = "HoaDon";
+            this.Load += new System.EventHandler(this.HoaDon_Load);
             this.ResumeLayout(false);
 
         }

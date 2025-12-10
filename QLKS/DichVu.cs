@@ -17,7 +17,7 @@ namespace QLKS
         public DichVu()
         {
             InitializeComponent();
-            conn = new SqlConnection(@"Data Source=Xu4nNh4n\SQLEXPRESS;Initial Catalog=QLKSSS;Integrated Security=True");
+            conn = new SqlConnection(@"Data Source=Xu4nNh4n\SQLEXPRESS;Initial Catalog=QLKS;Integrated Security=True");
         }
 
         private void DichVu_Load(object sender, EventArgs e)

@@ -18,7 +18,7 @@ namespace QLKS
         public DangNhap()
         {
             InitializeComponent();
-            conn = new SqlConnection(@"Data Source=Xu4nNh4n\SQLEXPRESS;Initial Catalog=QLKSSS;Integrated Security=True");
+            conn = new SqlConnection(@"Data Source=Xu4nNh4n\SQLEXPRESS;Initial Catalog=QLKS;Integrated Security=True");
         }
 
         private void DangNhap_Load(object sender, EventArgs e)

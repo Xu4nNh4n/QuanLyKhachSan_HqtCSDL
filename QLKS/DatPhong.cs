@@ -19,7 +19,7 @@ namespace QLKS
         public DatPhong()
         {
             InitializeComponent();
-            conn = new SqlConnection(@"Data Source=Xu4nNh4n\SQLEXPRESS;Initial Catalog=QLKSSS;Integrated Security=True");
+            conn = new SqlConnection(@"Data Source=Xu4nNh4n\SQLEXPRESS;Initial Catalog=QLKS;Integrated Security=True");
         }
 
         private void DatPhong_Load(object sender, EventArgs e)
@@ -44,9 +44,6 @@ namespace QLKS
             lstVKH.Columns[5].Width = (int)(tongWidth2 * 0.12);
             dtPNgayNhan.Format = DateTimePickerFormat.Short;
             dtPNgayNhan.CustomFormat = "dd/MM/yyyy";
-            dtPNgayTra.Enabled = false;
-            dtPNgayTra.Format = DateTimePickerFormat.Custom;
-            dtPNgayTra.CustomFormat = " ";
             LoadTTKhach();
             lstVKH.Visible = false;
             LoadListViewKhach();
@@ -65,7 +62,7 @@ namespace QLKS
                                FROM KHACH KH
                                JOIN DATPHONG DP ON DP.MAKH = KH.MAKH
                                JOIN PHONG PH ON PH.MAPH = DP.MAPH
-                               ORDER BY DP.MADATPH DESC";
+                               WHERE PH.TRANGTHAI = N'Đã đặt' OR PH.TRANGTHAI = N'Đang ở' AND DP.NGAYTRA IS NULL ORDER BY DP.MADATPH DESC";
 
                 using (SqlCommand cmd = new SqlCommand(sql, conn))
                 using (SqlDataReader reader = cmd.ExecuteReader())
@@ -238,17 +235,10 @@ namespace QLKS
 
                 DateTime ngayDat = DateTime.Today;
                 DateTime ngayNhan = dtPNgayNhan.Value.Date;
-                DateTime? ngayTra = dtPNgayTra.Checked ? dtPNgayTra.Value.Date : (DateTime?)null;
 
                 if (ngayNhan < ngayDat)
                 {
                     MessageBox.Show("Ngày nhận không được nhỏ hơn ngày đặt!");
-                    return;
-                }
-
-                if (ngayTra.HasValue && ngayTra.Value <= ngayNhan)
-                {
-                    MessageBox.Show("Ngày trả phải lớn hơn ngày nhận!");
                     return;
                 }
 
@@ -285,8 +275,8 @@ namespace QLKS
 
                 // Insert đặt phòng
                 string sqlDat = @"
-            INSERT INTO DATPHONG (MAKH, MAPH, NGAYDAT, NGAYNHAN, NGAYTRA)
-            VALUES (@makh, @maph, @ngaydat, @ngaynhan, @ngaytra)";
+            INSERT INTO DATPHONG (MAKH, MAPH, NGAYDAT, NGAYNHAN)
+            VALUES (@makh, @maph, @ngaydat, @ngaynhan)";
 
                 using (SqlCommand cmd = new SqlCommand(sqlDat, conn))
                 {
@@ -294,7 +284,6 @@ namespace QLKS
                     cmd.Parameters.AddWithValue("@maph", mapSelected);
                     cmd.Parameters.AddWithValue("@ngaydat", ngayDat);
                     cmd.Parameters.AddWithValue("@ngaynhan", ngayNhan);
-                    cmd.Parameters.AddWithValue("@ngaytra", (object)ngayTra ?? DBNull.Value);
                     cmd.ExecuteNonQuery();
                 }
 
@@ -320,21 +309,6 @@ namespace QLKS
             }
         }
 
-        private void chkNgayTra_CheckedChanged(object sender, EventArgs e)
-        {
-            if (!chkNgayTra.Checked)
-            {
-                dtPNgayTra.Enabled = false;
-                dtPNgayTra.Format = DateTimePickerFormat.Custom;
-                dtPNgayTra.CustomFormat = " ";
-            }
-            else
-            {
-                dtPNgayTra.Enabled = true;
-                dtPNgayTra.Format = DateTimePickerFormat.Short;
-                dtPNgayTra.CustomFormat = "dd/MM/yyyy";
-            }
-        }
 
         private void btnNhanPhong_Click(object sender, EventArgs e)
         {
@@ -468,24 +442,6 @@ namespace QLKS
                                 dtPNgayNhan.Value = Convert.ToDateTime(reader["NGAYNHAN"]);
                             else
                                 dtPNgayNhan.Value = DateTime.Today;
-
-                            // Ngày trả
-                            if (reader["NGAYTRA"] == DBNull.Value)
-                            {
-                                chkNgayTra.Checked = false;
-                                dtPNgayTra.Enabled = false;
-                                dtPNgayTra.CustomFormat = " ";
-                            }
-                            else
-                            {
-                                chkNgayTra.Checked = true;
-                                dtPNgayTra.Enabled = true;
-                                dtPNgayTra.Format = DateTimePickerFormat.Short;
-                                dtPNgayTra.Value = Convert.ToDateTime(reader["NGAYTRA"]);
-                            }
-
-                            // set selected values safely
-                            // đóng reader trước khi gọi LoadPhongTheoLoai (đã trong using so reader auto closed)
                             reader.Close();
 
                             isLoading = true;

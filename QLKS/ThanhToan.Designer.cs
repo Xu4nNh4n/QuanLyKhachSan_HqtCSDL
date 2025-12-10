@@ -32,11 +32,14 @@
             // 
             // ThanhToan
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(979, 561);
+            this.ClientSize = new System.Drawing.Size(880, 546);
+            this.Font = new System.Drawing.Font("Cascadia Code SemiBold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "ThanhToan";
-            this.Text = "BaoCao";
+            this.Text = "ThanhToan";
+            this.Load += new System.EventHandler(this.ThanhToan_Load);
             this.ResumeLayout(false);
 
         }

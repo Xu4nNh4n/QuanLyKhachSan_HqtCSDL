@@ -55,15 +55,12 @@
             this.txtLoaiGiayTo = new System.Windows.Forms.TextBox();
             this.grbTTKhach = new System.Windows.Forms.GroupBox();
             this.cbHienThiDSKH = new System.Windows.Forms.CheckBox();
-            this.chkNgayTra = new System.Windows.Forms.CheckBox();
             this.cbPhong = new System.Windows.Forms.ComboBox();
             this.cbLoaiPhong = new System.Windows.Forms.ComboBox();
             this.txtQuocTich = new System.Windows.Forms.TextBox();
-            this.dtPNgayTra = new System.Windows.Forms.DateTimePicker();
             this.dtPNgayNhan = new System.Windows.Forms.DateTimePicker();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.lstVKH = new System.Windows.Forms.ListView();
@@ -272,15 +269,12 @@
             // grbTTKhach
             // 
             this.grbTTKhach.Controls.Add(this.cbHienThiDSKH);
-            this.grbTTKhach.Controls.Add(this.chkNgayTra);
             this.grbTTKhach.Controls.Add(this.cbPhong);
             this.grbTTKhach.Controls.Add(this.cbLoaiPhong);
             this.grbTTKhach.Controls.Add(this.txtQuocTich);
-            this.grbTTKhach.Controls.Add(this.dtPNgayTra);
             this.grbTTKhach.Controls.Add(this.dtPNgayNhan);
             this.grbTTKhach.Controls.Add(this.label11);
             this.grbTTKhach.Controls.Add(this.label10);
-            this.grbTTKhach.Controls.Add(this.label9);
             this.grbTTKhach.Controls.Add(this.label8);
             this.grbTTKhach.Controls.Add(this.label6);
             this.grbTTKhach.Controls.Add(this.txtLoaiGiayTo);
@@ -313,21 +307,10 @@
             this.cbHienThiDSKH.UseVisualStyleBackColor = true;
             this.cbHienThiDSKH.CheckedChanged += new System.EventHandler(this.cbHienThiDSKH_CheckedChanged);
             // 
-            // chkNgayTra
-            // 
-            this.chkNgayTra.AutoSize = true;
-            this.chkNgayTra.Location = new System.Drawing.Point(359, 140);
-            this.chkNgayTra.Name = "chkNgayTra";
-            this.chkNgayTra.Size = new System.Drawing.Size(163, 21);
-            this.chkNgayTra.TabIndex = 22;
-            this.chkNgayTra.Text = "Xác nhận ngày trả";
-            this.chkNgayTra.UseVisualStyleBackColor = true;
-            this.chkNgayTra.CheckedChanged += new System.EventHandler(this.chkNgayTra_CheckedChanged);
-            // 
             // cbPhong
             // 
             this.cbPhong.FormattingEnabled = true;
-            this.cbPhong.Location = new System.Drawing.Point(466, 201);
+            this.cbPhong.Location = new System.Drawing.Point(466, 144);
             this.cbPhong.Name = "cbPhong";
             this.cbPhong.Size = new System.Drawing.Size(200, 25);
             this.cbPhong.TabIndex = 21;
@@ -335,7 +318,7 @@
             // cbLoaiPhong
             // 
             this.cbLoaiPhong.FormattingEnabled = true;
-            this.cbLoaiPhong.Location = new System.Drawing.Point(466, 165);
+            this.cbLoaiPhong.Location = new System.Drawing.Point(466, 103);
             this.cbLoaiPhong.Name = "cbLoaiPhong";
             this.cbLoaiPhong.Size = new System.Drawing.Size(200, 25);
             this.cbLoaiPhong.TabIndex = 20;
@@ -348,14 +331,6 @@
             this.txtQuocTich.Size = new System.Drawing.Size(200, 23);
             this.txtQuocTich.TabIndex = 19;
             // 
-            // dtPNgayTra
-            // 
-            this.dtPNgayTra.CustomFormat = "yyyy-MM-dd";
-            this.dtPNgayTra.Location = new System.Drawing.Point(466, 105);
-            this.dtPNgayTra.Name = "dtPNgayTra";
-            this.dtPNgayTra.Size = new System.Drawing.Size(200, 23);
-            this.dtPNgayTra.TabIndex = 17;
-            // 
             // dtPNgayNhan
             // 
             this.dtPNgayNhan.CustomFormat = "yyyy-MM-dd";
@@ -367,7 +342,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(356, 168);
+            this.label11.Location = new System.Drawing.Point(356, 108);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(88, 17);
             this.label11.TabIndex = 15;
@@ -376,20 +351,11 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(356, 204);
+            this.label10.Location = new System.Drawing.Point(356, 144);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(48, 17);
             this.label10.TabIndex = 14;
             this.label10.Text = "Phòng";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(356, 108);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(72, 17);
-            this.label9.TabIndex = 13;
-            this.label9.Text = "Ngày trả";
             // 
             // label8
             // 
@@ -500,13 +466,11 @@
         private System.Windows.Forms.GroupBox grbTTKhach;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox cbPhong;
         private System.Windows.Forms.ComboBox cbLoaiPhong;
         private System.Windows.Forms.TextBox txtQuocTich;
-        private System.Windows.Forms.DateTimePicker dtPNgayTra;
         private System.Windows.Forms.DateTimePicker dtPNgayNhan;
         private System.Windows.Forms.Button btnXoaThongTin;
         private System.Windows.Forms.Button btnSuaThongTin;
@@ -521,7 +485,6 @@
         private System.Windows.Forms.ColumnHeader colNgayNhan;
         private System.Windows.Forms.ColumnHeader colNgayTra;
         private System.Windows.Forms.ColumnHeader colTrangThai;
-        private System.Windows.Forms.CheckBox chkNgayTra;
         private System.Windows.Forms.ListView lstVKH;
         private System.Windows.Forms.ColumnHeader colMKH;
         private System.Windows.Forms.ColumnHeader colTenKH;

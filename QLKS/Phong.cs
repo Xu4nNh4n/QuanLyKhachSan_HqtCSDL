@@ -18,7 +18,7 @@ namespace QLKS
         public Phong()
         {
             InitializeComponent();
-            conn = new SqlConnection(@"Data Source=Xu4nNh4n\SQLEXPRESS;Initial Catalog=QLKSSS;Integrated Security=True");
+            conn = new SqlConnection(@"Data Source=Xu4nNh4n\SQLEXPRESS;Initial Catalog=QLKS;Integrated Security=True");
         }
 
         private void Phong_Load(object sender, EventArgs e)

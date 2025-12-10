@@ -9,7 +9,7 @@ namespace QLKS
     public partial class HoaDon : Form
     {
         SqlConnection conn = new SqlConnection(
-            @"Data Source=Xu4nNh4n\SQLEXPRESS;Initial Catalog=QLKSSS;Integrated Security=True"
+            @"Data Source=Xu4nNh4n\SQLEXPRESS;Initial Catalog=QLKS;Integrated Security=True"
         );
 
         TextBox txtSearch;
@@ -17,6 +17,11 @@ namespace QLKS
         DataGridView dgvInvoices, dgvServices;
         Panel pnlDetail;
         Label lblKH, lblPhong, lblNgay, lblTienPhong, lblTienDV, lblTong;
+
+        private void HoaDon_Load(object sender, EventArgs e)
+        {
+
+        }
 
         public HoaDon()
         {
@@ -32,21 +37,25 @@ namespace QLKS
         private void BuildUI()
         {
             this.Text = "Quản lý hóa đơn";
-            this.Size = new Size(1200, 720);
+            this.Size = new Size(896, 585);
             this.BackColor = Color.FromArgb(245, 247, 250);
 
+            // ==============================
+            // Ô TÌM KIẾM & NÚT
+            // ==============================
             txtSearch = new TextBox()
             {
-                Location = new Point(20, 20),
-                Width = 300,
-                Font = new Font("Segoe UI", 11),
+                Location = new Point(20, 15),
+                Width = 220,
+                Font = new Font("Segoe UI", 10),
             };
 
             btnSearch = new Button()
             {
-                Location = new Point(330, 18),
+                Location = new Point(250, 13),
                 Text = "Tìm",
-                Width = 80,
+                Width = 60,
+                Height = 28,
                 BackColor = Color.FromArgb(52, 152, 219),
                 ForeColor = Color.White,
                 FlatStyle = FlatStyle.Flat
@@ -54,9 +63,10 @@ namespace QLKS
 
             btnRefresh = new Button()
             {
-                Location = new Point(420, 18),
+                Location = new Point(320, 13),
                 Text = "Làm mới",
-                Width = 90,
+                Width = 80,
+                Height = 28,
                 BackColor = Color.FromArgb(46, 204, 113),
                 ForeColor = Color.White,
                 FlatStyle = FlatStyle.Flat
@@ -64,27 +74,35 @@ namespace QLKS
 
             btnIn = new Button()
             {
-                Location = new Point(520, 18),
+                Location = new Point(410, 13),
                 Text = "In hoá đơn",
-                Width = 110,
+                Width = 90,
+                Height = 28,
                 BackColor = Color.FromArgb(155, 89, 182),
                 ForeColor = Color.White,
                 FlatStyle = FlatStyle.Flat
             };
 
+            // ==============================
+            // BẢNG HÓA ĐƠN
+            // ==============================
             dgvInvoices = new DataGridView()
             {
-                Location = new Point(20, 60),
-                Size = new Size(700, 600),
+                Location = new Point(20, 55),
+                Size = new Size(420, 370),
                 BackgroundColor = Color.White,
-                AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
+                AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill,
+                BorderStyle = BorderStyle.FixedSingle
             };
             dgvInvoices.EnableHeadersVisualStyles = false;
 
+            // ==============================
+            // PANEL CHI TIẾT
+            // ==============================
             pnlDetail = new Panel()
             {
-                Location = new Point(740, 60),
-                Size = new Size(430, 600),
+                Location = new Point(460, 55),
+                Size = new Size(310, 370),
                 BackColor = Color.White,
                 BorderStyle = BorderStyle.FixedSingle
             };
@@ -92,34 +110,49 @@ namespace QLKS
             Label lblTitle = new Label()
             {
                 Text = "CHI TIẾT HÓA ĐƠN",
-                Font = new Font("Segoe UI", 13, FontStyle.Bold),
-                Location = new Point(120, 10),
+                Font = new Font("Segoe UI", 12, FontStyle.Bold),
+                Location = new Point(70, 10),
             };
 
-            lblKH = new Label() { Location = new Point(20, 60), Font = new Font("Segoe UI", 10) };
-            lblPhong = new Label() { Location = new Point(20, 90), Font = new Font("Segoe UI", 10) };
-            lblNgay = new Label() { Location = new Point(20, 120), Font = new Font("Segoe UI", 10) };
+            // Thông tin cơ bản
+            lblKH = new Label() { Location = new Point(20, 45), Font = new Font("Segoe UI", 10) };
+            lblPhong = new Label() { Location = new Point(20, 70), Font = new Font("Segoe UI", 10) };
+            lblNgay = new Label() { Location = new Point(20, 95), Font = new Font("Segoe UI", 10) };
 
+            // Tiêu đề dịch vụ
             Label lblDV = new Label()
             {
                 Text = "Dịch vụ đã dùng:",
-                Location = new Point(20, 160),
+                Location = new Point(20, 125),
                 Font = new Font("Segoe UI", 10, FontStyle.Bold)
             };
 
+            // Bảng dịch vụ — thu nhỏ lại
             dgvServices = new DataGridView()
             {
-                Location = new Point(20, 190),
-                Size = new Size(390, 200),
+                Location = new Point(20, 150),
+                Size = new Size(270, 130),
                 BackgroundColor = Color.White,
-                AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
+                AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill,
+                BorderStyle = BorderStyle.FixedSingle,
             };
 
-            lblTienPhong = new Label() { Location = new Point(20, 400), Font = new Font("Segoe UI", 10) };
-            lblTienDV = new Label() { Location = new Point(20, 430), Font = new Font("Segoe UI", 10) };
+            // Tiền
+            lblTienPhong = new Label()
+            {
+                Location = new Point(20, 290),
+                Font = new Font("Segoe UI", 10)
+            };
+
+            lblTienDV = new Label()
+            {
+                Location = new Point(20, 315),
+                Font = new Font("Segoe UI", 10)
+            };
+
             lblTong = new Label()
             {
-                Location = new Point(20, 470),
+                Location = new Point(20, 340),
                 Font = new Font("Segoe UI", 12, FontStyle.Bold),
                 ForeColor = Color.Red
             };
@@ -141,6 +174,7 @@ namespace QLKS
             this.Controls.Add(dgvInvoices);
             this.Controls.Add(pnlDetail);
         }
+
 
         // ===============================
         // LOAD HÓA ĐƠN
@@ -174,16 +208,21 @@ namespace QLKS
                 da.Fill(dt);
 
                 dgvInvoices.DataSource = dt;
+                void SetHeader(string col, string header)
+                {
+                    if (dgvInvoices.Columns[col] != null)
+                        dgvInvoices.Columns[col].HeaderText = header;
+                }
 
                 // đặt tên header đẹp
-                dgvInvoices.Columns["MAHD"].HeaderText = "Mã HĐ";
-                dgvInvoices.Columns["TenKH"].HeaderText = "Tên khách";
-                dgvInvoices.Columns["SoPhong"].HeaderText = "Phòng";
-                dgvInvoices.Columns["NgayLap"].HeaderText = "Ngày lập";
-                dgvInvoices.Columns["TienPhong"].HeaderText = "Tiền phòng";
-                dgvInvoices.Columns["TienDV"].HeaderText = "Tiền DV";
-                dgvInvoices.Columns["TongTien"].HeaderText = "Tổng tiền";
-                dgvInvoices.Columns["MADATPH"].HeaderText = "Mã đặt phòng";
+                SetHeader("MAHD", "Mã HĐ");
+                SetHeader("TenKH", "Tên khách");
+                SetHeader("SoPhong", "Phòng");
+                SetHeader("NgayLap", "Ngày lập");
+                SetHeader("TienPhong", "Tiền phòng");
+                SetHeader("TienDV", "Tiền DV");
+                SetHeader("TongTien", "Tổng tiền");
+                SetHeader("MADATPH", "Mã đặt phòng");
             }
             finally
             {
@@ -195,19 +234,43 @@ namespace QLKS
         private void DgvInvoices_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex < 0) return;
+            if (dgvInvoices.Rows.Count == 0) return;
+            if (dgvInvoices.CurrentRow == null) return;
 
-            var r = dgvInvoices.Rows[e.RowIndex];
+            DataGridViewRow r = dgvInvoices.Rows[e.RowIndex];
 
-            lblKH.Text = "Khách hàng: " + r.Cells["TenKH"].Value.ToString();
-            lblPhong.Text = "Phòng: " + r.Cells["SoPhong"].Value.ToString();
-            lblNgay.Text = "Ngày lập: " + Convert.ToDateTime(r.Cells["NgayLap"].Value).ToString("dd/MM/yyyy");
+            string Get(string col)
+            {
+                return r.Cells[col]?.Value?.ToString() ?? "";
+            }
 
-            lblTienPhong.Text = "Tiền phòng: " + r.Cells["TienPhong"].Value + " VND";
-            lblTienDV.Text = "Tiền dịch vụ: " + r.Cells["TienDV"].Value + " VND";
-            lblTong.Text = "Tổng cộng: " + r.Cells["TongTien"].Value + " VND";
+            // Parse an toàn
+            decimal SafeDecimal(string s)
+            {
+                decimal val;
+                return decimal.TryParse(s, out val) ? val : 0;
+            }
 
-            int maDatPh = Convert.ToInt32(r.Cells["MADATPH"].Value);
-            LoadDichVu(maDatPh);
+            lblKH.Text = "Khách hàng: " + Get("TenKH");
+            lblPhong.Text = "Phòng: " + Get("SoPhong");
+
+            DateTime ngayLap;
+            if (DateTime.TryParse(Get("NgayLap"), out ngayLap))
+                lblNgay.Text = "Ngày lập: " + ngayLap.ToString("dd/MM/yyyy");
+            else
+                lblNgay.Text = "Ngày lập: ---";
+
+            lblTienPhong.Text = "Tiền phòng: " +
+                string.Format("{0:N0} VND", SafeDecimal(Get("TienPhong")));
+
+            lblTienDV.Text = "Tiền dịch vụ: " +
+                string.Format("{0:N0} VND", SafeDecimal(Get("TienDV")));
+
+            lblTong.Text = "Tổng cộng: " +
+                string.Format("{0:N0} VND", SafeDecimal(Get("TongTien")));
+
+            if (int.TryParse(Get("MADATPH"), out int maDatPh))
+                LoadDichVu(maDatPh);
         }
 
 
@@ -219,14 +282,12 @@ namespace QLKS
                     conn.Open();
 
                 string sql = @"
-            SELECT 
-                DV.TENDV AS TenDV, 
-                DV.DONGIA AS DonGia, 
-                SD.SOLUONG AS SoLuong,
-                (DV.DONGIA * SD.SOLUONG) AS ThanhTien
-            FROM SUDUNGDV SD
-            JOIN DICHVU DV ON SD.MADV = DV.MADV
-            WHERE SD.MADATPH = @MaDP";
+            SELECT DV.TENDV, CT.SOLUONG, CT.GIADV, SUM(CT.SOLUONG * CT.GIADV) AS ThanhTien
+            FROM CHITIETHD CT
+            JOIN HOADON HD ON CT.MAHD = HD.MAHD
+            JOIN DICHVU DV ON DV.MADV = CT.MADV
+            WHERE HD.MADATPH = @MaDP
+            GROUP BY DV.TENDV, CT.SOLUONG, CT.GIADV";
 
                 SqlDataAdapter da = new SqlDataAdapter(sql, conn);
                 da.SelectCommand.Parameters.AddWithValue("@MaDP", maDatPh);
@@ -237,9 +298,9 @@ namespace QLKS
                 dgvServices.DataSource = dt;
 
                 // header đẹp
-                dgvServices.Columns["TenDV"].HeaderText = "Tên DV";
-                dgvServices.Columns["DonGia"].HeaderText = "Đơn giá";
-                dgvServices.Columns["SoLuong"].HeaderText = "SL";
+                dgvServices.Columns["TENDV"].HeaderText = "Tên DV";
+                dgvServices.Columns["SOLUONG"].HeaderText = "SL";
+                dgvServices.Columns["GIADV"].HeaderText = "Giá dv";
                 dgvServices.Columns["ThanhTien"].HeaderText = "Thành tiền";
             }
             finally
