@@ -243,7 +243,22 @@ BEGIN
 END;
 GO
 
+CREATE TRIGGER trg_XoaDVChuaHoanThanh
+ON DATPHONG
+AFTER UPDATE
+AS
+BEGIN
+    DELETE SD
+    FROM SUDUNGDV SD
+    JOIN inserted i ON SD.MADATPH = i.MADATPH
+    JOIN deleted d ON d.MADATPH = i.MADATPH
+    WHERE d.NGAYTRA IS NULL     
+      AND i.NGAYTRA IS NOT NULL   
+      AND SD.TRANGTHAI NOT IN (N'Đã hoàn thành');  
+END
+GO
 -- Hàm: Tính tiền phòng (Sửa lỗi 0 ngày)
+DROP FUNCTION fn_TongTienPhong
 CREATE FUNCTION fn_TongTienPhong(@MaDatPh INT)
 RETURNS MONEY
 AS
@@ -252,14 +267,16 @@ BEGIN
     
     SELECT @Tien = 
         CASE 
-            WHEN DATEDIFF(DAY, NGAYNHAN, NGAYTRA) = 0 THEN LP.GIA -- Nếu ở trong ngày thì tính 1 ngày
-            ELSE DATEDIFF(DAY, NGAYNHAN, NGAYTRA) * LP.GIA
+            WHEN DATEDIFF(DAY, NGAYNHAN, ISNULL(NGAYTRA, GETDATE())) = 0
+                THEN LP.GIA
+            ELSE
+                DATEDIFF(DAY, NGAYNHAN, ISNULL(NGAYTRA, GETDATE())) * LP.GIA
         END
     FROM DATPHONG DP
     JOIN PHONG P ON DP.MAPH = P.MAPH
     JOIN LOAIPHONG LP ON P.MALP = LP.MALP
     WHERE DP.MADATPH = @MaDatPh;
-    
+
     RETURN ISNULL(@Tien, 0);
 END;
 GO
@@ -282,49 +299,69 @@ END;
 GO
 
 -- Proc: Thêm dịch vụ vào phòng
-CREATE PROC sp_ThemDichVuVaoPhong
+DROP PROC sp_ThemDichVuVaoPhong
+CREATE PROC sp_CapNhatDichVuPhong
     @MADATPH INT,
     @MADV INT,
     @MANV INT,
-    @SOLUONG INT
+    @SOLUONG INT,
+    @GHICHU NVARCHAR(200)
 AS
-BEGIN 
-    IF @SOLUONG <= 0
-    BEGIN 
-        PRINT N'SỐ LƯỢNG PHẢI LỚN HƠN 0'
-        RETURN
-    END
-    IF NOT EXISTS (SELECT 1 FROM DATPHONG WHERE MADATPH = @MADATPH)
+BEGIN
+    DECLARE @SoLuongCu INT;
+
+    -- Lấy số lượng cũ
+    SELECT @SoLuongCu = SOLUONG
+    FROM SUDUNGDV
+    WHERE MADATPH = @MADATPH AND MADV = @MADV AND MANV = @MANV;
+
+    -- Nếu chưa có -> insert mới
+    IF @SoLuongCu IS NULL
     BEGIN
-        PRINT N'MÃ ĐẶT PHÒNG KHÔNG TỒN TẠI'
-        RETURN
+        IF @SOLUONG <= 0
+        BEGIN
+            PRINT N'Số lượng phải > 0 để thêm mới';
+            RETURN;
+        END
+
+        INSERT INTO SUDUNGDV (MADATPH, MADV, MANV, SOLUONG, GHICHU)
+        VALUES(@MADATPH, @MADV, @MANV, @SOLUONG, @GHICHU);
+
+        PRINT N'Thêm dịch vụ thành công';
+        RETURN;
     END
-    IF NOT EXISTS (SELECT 1 FROM DICHVU WHERE MADV = @MADV)
+
+    -- Nếu có rồi -> tính số lượng mới
+    DECLARE @SoLuongMoi INT = @SoLuongCu + @SOLUONG;
+
+    -- Nếu số lượng mới <= 0 -> xóa
+    IF @SoLuongMoi <= 0
     BEGIN
-        PRINT N'MÃ DỊCH VỤ KHÔNG TỒN TẠI'
-        RETURN
+        DELETE FROM SUDUNGDV
+        WHERE MADATPH = @MADATPH AND MADV = @MADV AND MANV = @MANV;
+
+        PRINT N'Đã xóa dịch vụ vì số lượng <= 0';
+        RETURN;
     END
-    
-    INSERT INTO SUDUNGDV (MADATPH, MADV, MANV, SOLUONG) 
-    VALUES (@MADATPH, @MADV, @MANV, @SOLUONG)
-    
-    PRINT N'DỊCH VỤ ĐÃ ĐẶT THÀNH CÔNG!'
+
+    -- Còn lại -> Update
+    UPDATE SUDUNGDV
+    SET SOLUONG = @SoLuongMoi,
+        GHICHU = @GHICHU
+    WHERE MADATPH = @MADATPH AND MADV = @MADV AND MANV = @MANV;
+
+    PRINT N'Cập nhật số lượng dịch vụ thành công';
 END
 GO
 
 -- 3. CÁC THỦ TỤC THỐNG KÊ (ĐÃ SỬA LOGIC)
 -- Lưu ý: Không dùng bảng CHITIETHD vì nó rỗng, dùng trực tiếp Hàm tính tiền
-
+DROP PROCEDURE sp_TongDoanhThuKhachSan
 CREATE PROCEDURE sp_TongDoanhThuKhachSan
 AS
 BEGIN
-    DECLARE @TongTien MONEY;
-
-    -- Tính tổng tất cả hóa đơn dựa trên (Tiền phòng + Tiền DV)
-    SELECT @TongTien = SUM(dbo.fn_TongTienPhong(MADATPH) + dbo.fn_TongTienDichVu(MADATPH))
+    SELECT SUM(dbo.fn_TongTienPhong(MADATPH) + dbo.fn_TongTienDichVu(MADATPH)) AS TongDoanhThu
     FROM HOADON;
-
-    PRINT N'Tổng doanh thu của khách sạn là: ' + FORMAT(ISNULL(@TongTien, 0), '#,##0');
 END;
 GO
 
@@ -431,6 +468,85 @@ SELECT
     dbo.fn_TongTienPhong(HD.MADATPH) + dbo.fn_TongTienDichVu(HD.MADATPH) AS TongTien
 FROM HOADON HD;
 
+-- Tạo login cho Nhân viên dịch vụ
+CREATE LOGIN nv_nhanvien WITH PASSWORD = 'NV@12345';
+
+-- Tạo login cho Admin
+CREATE LOGIN admin_qlks WITH PASSWORD = 'Admin@12345';
+GO
 
 
+CREATE USER nv_nhanvien_user FOR LOGIN nv_nhanvien;
+CREATE USER admin_user        FOR LOGIN admin_qlks;
+GO
+
+---------------------------------------------------------
+--  PHẦN 3 — TẠO ROLE
+---------------------------------------------------------
+
+
+CREATE ROLE Role_NhanVien;
+CREATE ROLE Role_Admin;
+GO
+
+---------------------------------------------------------
+--  PHẦN 4 — GÁN USER VÀO ROLE
+---------------------------------------------------------
+
+EXEC sp_addrolemember 'Role_NhanVien', 'nv_nhanvien_user';
+EXEC sp_addrolemember 'Role_Admin',    'admin_user';
+GO
+
+---------------------------------------------------------
+--  PHẦN 5 — PHÂN QUYỀN ( GRANT)
+---------------------------------------------------------
+
+
+-- Quyền cho Nhân viên dịch vụ
+GRANT SELECT ON DICHVU     TO Role_NhanVien;
+GRANT INSERT ON SUDUNGDV   TO Role_NhanVien;
+
+-- Quyền cho Admin (toàn quyền)
+GRANT SELECT, INSERT, UPDATE, DELETE ON KHACH     TO Role_Admin;
+GRANT SELECT, INSERT, UPDATE, DELETE ON DATPHONG  TO Role_Admin;
+GRANT SELECT, INSERT, UPDATE, DELETE ON PHONG     TO Role_Admin;
+GRANT SELECT, INSERT, UPDATE, DELETE ON DICHVU    TO Role_Admin;
+GRANT SELECT, INSERT, UPDATE, DELETE ON SUDUNGDV  TO Role_Admin;
+GO
+---------------------------------------------------------
+--  PHẦN 7 — ĐỔI MẬT KHẨU
+---------------------------------------------------------
+ALTER LOGIN nv_nhanvien WITH PASSWORD = 'NewPass123';
+GO
+
+---------------------------------------------------------
+--  PHẦN 8 — KHÓA / MỞ LOGIN
+
+ALTER LOGIN nv_nhanvien DISABLE;   -- Khóa
+ALTER LOGIN nv_nhanvien ENABLE;    -- Mở
+GO
+----- backup
+---- tạo một folder trong ổ D
+BACKUP DATABASE QLKSS
+TO DISK = 'D:\Backup\QLKSS_full.bak'
+WITH FORMAT,
+     MEDIANAME = 'QLKSS_Backup',
+     NAME = 'Full Backup QLKSS';
+GO
+
+----restore
+----Trước khi restore database đang tồn tại →  đóng kết nối & chuyển sang SINGLE_USER
+USE master;
+GO
+
+ALTER DATABASE QLKSS SET SINGLE_USER WITH ROLLBACK IMMEDIATE;
+GO
+ RESTORE DATABASE QLKSS
+FROM DISK = 'D:\Backup\QLKSS_full.bak'
+WITH REPLACE;
+GO
+----Sau khi restore xong → chuyển lại MULTI_USER( cho nhiều người dùng)
+
+ALTER DATABASE QLKSS SET MULTI_USER;
+GO
 

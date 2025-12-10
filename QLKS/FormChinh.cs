@@ -91,5 +91,10 @@ namespace QLKS
                 this.Close();
             }
         }
+
+        private void btnThongKe_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new ThongKe());
+        }
     }
 }

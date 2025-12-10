@@ -458,5 +458,10 @@ namespace QLKS
                 conn.Close();
             }
         }
+
+        private void grbNV_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

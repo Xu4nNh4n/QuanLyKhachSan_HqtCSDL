@@ -42,6 +42,7 @@
             this.btnBaoCao = new System.Windows.Forms.Button();
             this.btnDoiMatKhau = new System.Windows.Forms.Button();
             this.pnlContainer = new System.Windows.Forms.Panel();
+            this.btnThongKe = new System.Windows.Forms.Button();
             this.flowLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
@@ -103,11 +104,12 @@
             this.flowLayoutPanel2.Controls.Add(this.btnPhong);
             this.flowLayoutPanel2.Controls.Add(this.btnHoaDon);
             this.flowLayoutPanel2.Controls.Add(this.btnBaoCao);
+            this.flowLayoutPanel2.Controls.Add(this.btnThongKe);
             this.flowLayoutPanel2.Controls.Add(this.btnDoiMatKhau);
             this.flowLayoutPanel2.Location = new System.Drawing.Point(117, 4);
             this.flowLayoutPanel2.Margin = new System.Windows.Forms.Padding(4);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(768, 97);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(913, 97);
             this.flowLayoutPanel2.TabIndex = 1;
             // 
             // btnDatPhong
@@ -189,7 +191,7 @@
             // 
             // btnDoiMatKhau
             // 
-            this.btnDoiMatKhau.Location = new System.Drawing.Point(676, 4);
+            this.btnDoiMatKhau.Location = new System.Drawing.Point(772, 4);
             this.btnDoiMatKhau.Margin = new System.Windows.Forms.Padding(4);
             this.btnDoiMatKhau.Name = "btnDoiMatKhau";
             this.btnDoiMatKhau.Size = new System.Drawing.Size(88, 90);
@@ -205,6 +207,17 @@
             this.pnlContainer.Name = "pnlContainer";
             this.pnlContainer.Size = new System.Drawing.Size(1034, 560);
             this.pnlContainer.TabIndex = 1;
+            // 
+            // btnThongKe
+            // 
+            this.btnThongKe.Location = new System.Drawing.Point(676, 4);
+            this.btnThongKe.Margin = new System.Windows.Forms.Padding(4);
+            this.btnThongKe.Name = "btnThongKe";
+            this.btnThongKe.Size = new System.Drawing.Size(88, 90);
+            this.btnThongKe.TabIndex = 10;
+            this.btnThongKe.Text = "Thống kê";
+            this.btnThongKe.UseVisualStyleBackColor = true;
+            this.btnThongKe.Click += new System.EventHandler(this.btnThongKe_Click);
             // 
             // FormChinh
             // 
@@ -241,5 +254,6 @@
         private System.Windows.Forms.Button btnBaoCao;
         private System.Windows.Forms.Button btnDoiMatKhau;
         private System.Windows.Forms.Panel pnlContainer;
+        private System.Windows.Forms.Button btnThongKe;
     }
 }

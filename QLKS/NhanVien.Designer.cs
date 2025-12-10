@@ -124,7 +124,7 @@
             // label8
             // 
             this.label8.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label8.Location = new System.Drawing.Point(6, 275);
+            this.label8.Location = new System.Drawing.Point(6, 266);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(123, 24);
             this.label8.TabIndex = 14;
@@ -134,7 +134,7 @@
             // label4
             // 
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label4.Location = new System.Drawing.Point(4, 205);
+            this.label4.Location = new System.Drawing.Point(4, 196);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(123, 24);
             this.label4.TabIndex = 6;
@@ -144,7 +144,7 @@
             // label2
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label2.Location = new System.Drawing.Point(6, 49);
+            this.label2.Location = new System.Drawing.Point(4, 40);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(123, 19);
             this.label2.TabIndex = 2;
@@ -154,7 +154,7 @@
             // label7
             // 
             this.label7.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label7.Location = new System.Drawing.Point(4, 240);
+            this.label7.Location = new System.Drawing.Point(6, 231);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(123, 24);
             this.label7.TabIndex = 12;
@@ -167,7 +167,7 @@
             this.tvDSNV.Font = new System.Drawing.Font("Cascadia Code SemiBold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tvDSNV.Location = new System.Drawing.Point(3, 3);
             this.tvDSNV.Name = "tvDSNV";
-            this.tvDSNV.Size = new System.Drawing.Size(501, 540);
+            this.tvDSNV.Size = new System.Drawing.Size(578, 569);
             this.tvDSNV.TabIndex = 1;
             this.tvDSNV.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.tvDSNV_AfterSelect);
             // 
@@ -176,9 +176,9 @@
             this.grbThongTinNV.Controls.Add(this.grbNV);
             this.grbThongTinNV.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grbThongTinNV.Font = new System.Drawing.Font("Cascadia Code SemiBold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grbThongTinNV.Location = new System.Drawing.Point(510, 3);
+            this.grbThongTinNV.Location = new System.Drawing.Point(587, 3);
             this.grbThongTinNV.Name = "grbThongTinNV";
-            this.grbThongTinNV.Size = new System.Drawing.Size(367, 540);
+            this.grbThongTinNV.Size = new System.Drawing.Size(546, 569);
             this.grbThongTinNV.TabIndex = 0;
             this.grbThongTinNV.TabStop = false;
             this.grbThongTinNV.Text = "Thông tin nhân viên";
@@ -204,12 +204,13 @@
             this.grbNV.Controls.Add(this.label4);
             this.grbNV.Controls.Add(this.label2);
             this.grbNV.Controls.Add(this.label7);
-            this.grbNV.Location = new System.Drawing.Point(20, 22);
+            this.grbNV.Location = new System.Drawing.Point(23, 33);
             this.grbNV.Name = "grbNV";
-            this.grbNV.Size = new System.Drawing.Size(328, 509);
+            this.grbNV.Size = new System.Drawing.Size(345, 509);
             this.grbNV.TabIndex = 2;
             this.grbNV.TabStop = false;
             this.grbNV.Text = "Thêm nhân viên";
+            this.grbNV.Enter += new System.EventHandler(this.grbNV_Enter);
             // 
             // panel2
             // 
@@ -283,7 +284,7 @@
             // label3
             // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label3.Location = new System.Drawing.Point(6, 104);
+            this.label3.Location = new System.Drawing.Point(9, 95);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(123, 24);
             this.label3.TabIndex = 31;
@@ -307,7 +308,7 @@
             // label5
             // 
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label5.Location = new System.Drawing.Point(6, 170);
+            this.label5.Location = new System.Drawing.Point(6, 161);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(123, 24);
             this.label5.TabIndex = 26;
@@ -317,7 +318,7 @@
             // label1
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label1.Location = new System.Drawing.Point(6, 135);
+            this.label1.Location = new System.Drawing.Point(6, 126);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(123, 24);
             this.label1.TabIndex = 25;
@@ -327,8 +328,8 @@
             // tblQuanLyNhanVien
             // 
             this.tblQuanLyNhanVien.ColumnCount = 2;
-            this.tblQuanLyNhanVien.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 57.61364F));
-            this.tblQuanLyNhanVien.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 42.38636F));
+            this.tblQuanLyNhanVien.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 51.40845F));
+            this.tblQuanLyNhanVien.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 48.59155F));
             this.tblQuanLyNhanVien.Controls.Add(this.tvDSNV, 0, 0);
             this.tblQuanLyNhanVien.Controls.Add(this.grbThongTinNV, 1, 0);
             this.tblQuanLyNhanVien.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -336,14 +337,14 @@
             this.tblQuanLyNhanVien.Name = "tblQuanLyNhanVien";
             this.tblQuanLyNhanVien.RowCount = 1;
             this.tblQuanLyNhanVien.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tblQuanLyNhanVien.Size = new System.Drawing.Size(880, 546);
+            this.tblQuanLyNhanVien.Size = new System.Drawing.Size(1136, 575);
             this.tblQuanLyNhanVien.TabIndex = 1;
             // 
             // NhanVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(880, 546);
+            this.ClientSize = new System.Drawing.Size(1136, 575);
             this.Controls.Add(this.tblQuanLyNhanVien);
             this.Name = "NhanVien";
             this.Text = "NhanVien";

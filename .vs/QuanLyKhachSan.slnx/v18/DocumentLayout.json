@@ -3,48 +3,67 @@
   "WorkspaceRootPath": "D:\\Code\\code\\C#\\.NET\\QuanLyKhachSan\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{95CCFFA6-BDEA-4002-B341-05E38A35BC7F}|QLKS\\QLKS.csproj|D:\\Code\\code\\C#\\.NET\\QuanLyKhachSan\\qlks\\dangnhap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{95CCFFA6-BDEA-4002-B341-05E38A35BC7F}|QLKS\\QLKS.csproj|solutionrelative:qlks\\dangnhap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{95CCFFA6-BDEA-4002-B341-05E38A35BC7F}|QLKS\\QLKS.csproj|d:\\code\\code\\c#\\.net\\quanlykhachsan\\qlks\\nhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{95CCFFA6-BDEA-4002-B341-05E38A35BC7F}|QLKS\\QLKS.csproj|solutionrelative:qlks\\nhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{95CCFFA6-BDEA-4002-B341-05E38A35BC7F}|QLKS\\QLKS.csproj|D:\\Code\\code\\C#\\.NET\\QuanLyKhachSan\\qlks\\dangnhap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{95CCFFA6-BDEA-4002-B341-05E38A35BC7F}|QLKS\\QLKS.csproj|solutionrelative:qlks\\dangnhap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{95CCFFA6-BDEA-4002-B341-05E38A35BC7F}|QLKS\\QLKS.csproj|D:\\Code\\code\\C#\\.NET\\QuanLyKhachSan\\qlks\\nhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95CCFFA6-BDEA-4002-B341-05E38A35BC7F}|QLKS\\QLKS.csproj|solutionrelative:qlks\\nhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{95CCFFA6-BDEA-4002-B341-05E38A35BC7F}|QLKS\\QLKS.csproj|D:\\Code\\code\\C#\\.NET\\QuanLyKhachSan\\qlks\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{95CCFFA6-BDEA-4002-B341-05E38A35BC7F}|QLKS\\QLKS.csproj|solutionrelative:qlks\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{95CCFFA6-BDEA-4002-B341-05E38A35BC7F}|QLKS\\QLKS.csproj|D:\\Code\\code\\C#\\.NET\\QuanLyKhachSan\\qlks\\thongke.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{95CCFFA6-BDEA-4002-B341-05E38A35BC7F}|QLKS\\QLKS.csproj|solutionrelative:qlks\\thongke.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{95CCFFA6-BDEA-4002-B341-05E38A35BC7F}|QLKS\\QLKS.csproj|D:\\Code\\code\\C#\\.NET\\QuanLyKhachSan\\qlks\\formchinh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{95CCFFA6-BDEA-4002-B341-05E38A35BC7F}|QLKS\\QLKS.csproj|solutionrelative:qlks\\formchinh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95CCFFA6-BDEA-4002-B341-05E38A35BC7F}|QLKS\\QLKS.csproj|D:\\Code\\code\\C#\\.NET\\QuanLyKhachSan\\qlks\\formchinh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{95CCFFA6-BDEA-4002-B341-05E38A35BC7F}|QLKS\\QLKS.csproj|solutionrelative:qlks\\formchinh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95CCFFA6-BDEA-4002-B341-05E38A35BC7F}|QLKS\\QLKS.csproj|D:\\Code\\code\\C#\\.NET\\QuanLyKhachSan\\qlks\\thongke.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95CCFFA6-BDEA-4002-B341-05E38A35BC7F}|QLKS\\QLKS.csproj|solutionrelative:qlks\\thongke.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95CCFFA6-BDEA-4002-B341-05E38A35BC7F}|QLKS\\QLKS.csproj|D:\\Code\\code\\C#\\.NET\\QuanLyKhachSan\\qlks\\hoadon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{95CCFFA6-BDEA-4002-B341-05E38A35BC7F}|QLKS\\QLKS.csproj|solutionrelative:qlks\\hoadon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95CCFFA6-BDEA-4002-B341-05E38A35BC7F}|QLKS\\QLKS.csproj|D:\\Code\\code\\C#\\.NET\\QuanLyKhachSan\\qlks\\hoadon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95CCFFA6-BDEA-4002-B341-05E38A35BC7F}|QLKS\\QLKS.csproj|solutionrelative:qlks\\hoadon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|c:\\Users\\Admin\\Downloads\\QuanLyKhachSan_HqtCSDL-master\\QLKS\\ThongKe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{95CCFFA6-BDEA-4002-B341-05E38A35BC7F}|QLKS\\QLKS.csproj|D:\\Code\\code\\C#\\.NET\\QuanLyKhachSan\\qlks\\thanhtoan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{95CCFFA6-BDEA-4002-B341-05E38A35BC7F}|QLKS\\QLKS.csproj|solutionrelative:qlks\\thanhtoan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{95CCFFA6-BDEA-4002-B341-05E38A35BC7F}|QLKS\\QLKS.csproj|D:\\Code\\code\\C#\\.NET\\QuanLyKhachSan\\qlks\\datphong.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{95CCFFA6-BDEA-4002-B341-05E38A35BC7F}|QLKS\\QLKS.csproj|solutionrelative:qlks\\datphong.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{95CCFFA6-BDEA-4002-B341-05E38A35BC7F}|QLKS\\QLKS.csproj|d:\\code\\code\\c#\\.net\\quanlykhachsan\\qlks\\hoadon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{95CCFFA6-BDEA-4002-B341-05E38A35BC7F}|QLKS\\QLKS.csproj|solutionrelative:qlks\\hoadon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{95CCFFA6-BDEA-4002-B341-05E38A35BC7F}|QLKS\\QLKS.csproj|D:\\Code\\code\\C#\\.NET\\QuanLyKhachSan\\qlks\\dichvu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{95CCFFA6-BDEA-4002-B341-05E38A35BC7F}|QLKS\\QLKS.csproj|solutionrelative:qlks\\dichvu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{95CCFFA6-BDEA-4002-B341-05E38A35BC7F}|QLKS\\QLKS.csproj|D:\\Code\\code\\C#\\.NET\\QuanLyKhachSan\\qlks\\doimatkhau.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{95CCFFA6-BDEA-4002-B341-05E38A35BC7F}|QLKS\\QLKS.csproj|solutionrelative:qlks\\doimatkhau.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{95CCFFA6-BDEA-4002-B341-05E38A35BC7F}|QLKS\\QLKS.csproj|D:\\Code\\code\\C#\\.NET\\QuanLyKhachSan\\qlks\\dangnhap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{95CCFFA6-BDEA-4002-B341-05E38A35BC7F}|QLKS\\QLKS.csproj|solutionrelative:qlks\\dangnhap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{95CCFFA6-BDEA-4002-B341-05E38A35BC7F}|QLKS\\QLKS.csproj|D:\\Code\\code\\C#\\.NET\\QuanLyKhachSan\\qlks\\khach.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{95CCFFA6-BDEA-4002-B341-05E38A35BC7F}|QLKS\\QLKS.csproj|solutionrelative:qlks\\khach.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{95CCFFA6-BDEA-4002-B341-05E38A35BC7F}|QLKS\\QLKS.csproj|D:\\Code\\code\\C#\\.NET\\QuanLyKhachSan\\qlks\\hoadon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{95CCFFA6-BDEA-4002-B341-05E38A35BC7F}|QLKS\\QLKS.csproj|solutionrelative:qlks\\hoadon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{95CCFFA6-BDEA-4002-B341-05E38A35BC7F}|QLKS\\QLKS.csproj|D:\\Code\\code\\C#\\.NET\\QuanLyKhachSan\\qlks\\dangnhap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95CCFFA6-BDEA-4002-B341-05E38A35BC7F}|QLKS\\QLKS.csproj|solutionrelative:qlks\\dangnhap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95CCFFA6-BDEA-4002-B341-05E38A35BC7F}|QLKS\\QLKS.csproj|D:\\Code\\code\\C#\\.NET\\QuanLyKhachSan\\qlks\\datphong.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95CCFFA6-BDEA-4002-B341-05E38A35BC7F}|QLKS\\QLKS.csproj|solutionrelative:qlks\\datphong.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95CCFFA6-BDEA-4002-B341-05E38A35BC7F}|QLKS\\QLKS.csproj|D:\\Code\\code\\C#\\.NET\\QuanLyKhachSan\\qlks\\dichvu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95CCFFA6-BDEA-4002-B341-05E38A35BC7F}|QLKS\\QLKS.csproj|solutionrelative:qlks\\dichvu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{95CCFFA6-BDEA-4002-B341-05E38A35BC7F}|QLKS\\QLKS.csproj|D:\\Code\\code\\C#\\.NET\\QuanLyKhachSan\\qlks\\datphong.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -55,16 +74,8 @@
       "RelativeMoniker": "D:0:0:{95CCFFA6-BDEA-4002-B341-05E38A35BC7F}|QLKS\\QLKS.csproj|solutionrelative:qlks\\phong.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{95CCFFA6-BDEA-4002-B341-05E38A35BC7F}|QLKS\\QLKS.csproj|D:\\Code\\code\\C#\\.NET\\QuanLyKhachSan\\qlks\\nhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{95CCFFA6-BDEA-4002-B341-05E38A35BC7F}|QLKS\\QLKS.csproj|solutionrelative:qlks\\nhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{95CCFFA6-BDEA-4002-B341-05E38A35BC7F}|QLKS\\QLKS.csproj|D:\\Code\\code\\C#\\.NET\\QuanLyKhachSan\\qlks\\thanhtoan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{95CCFFA6-BDEA-4002-B341-05E38A35BC7F}|QLKS\\QLKS.csproj|solutionrelative:qlks\\thanhtoan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{95CCFFA6-BDEA-4002-B341-05E38A35BC7F}|QLKS\\QLKS.csproj|D:\\Code\\code\\C#\\.NET\\QuanLyKhachSan\\qlks\\formchinh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{95CCFFA6-BDEA-4002-B341-05E38A35BC7F}|QLKS\\QLKS.csproj|solutionrelative:qlks\\formchinh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{95CCFFA6-BDEA-4002-B341-05E38A35BC7F}|QLKS\\QLKS.csproj|D:\\Code\\code\\C#\\.NET\\QuanLyKhachSan\\qlks\\dichvu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -90,11 +101,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 71,
-          "SelectedChildIndex": 19,
+          "SelectedChildIndex": 14,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 7,
               "Title": "HoaDon.cs [Design]",
               "DocumentMoniker": "D:\\Code\\code\\C#\\.NET\\QuanLyKhachSan\\QLKS\\HoaDon.cs",
               "RelativeDocumentMoniker": "QLKS\\HoaDon.cs",
@@ -102,8 +113,7 @@
               "RelativeToolTip": "QLKS\\HoaDon.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-09T15:04:02.522Z",
-              "IsPinned": true,
-              "EditorCaption": " [Design]"
+              "IsPinned": true
             },
             {
               "$type": "Bookmark",
@@ -159,20 +169,64 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 0,
+              "Title": "NhanVien.cs [Design]",
+              "DocumentMoniker": "D:\\Code\\code\\C#\\.NET\\QuanLyKhachSan\\QLKS\\NhanVien.cs",
+              "RelativeDocumentMoniker": "QLKS\\NhanVien.cs",
+              "ToolTip": "D:\\Code\\code\\C#\\.NET\\QuanLyKhachSan\\QLKS\\NhanVien.cs [Design]",
+              "RelativeToolTip": "QLKS\\NhanVien.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-10T14:34:02.218Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "FormChinh.cs",
+              "DocumentMoniker": "D:\\Code\\code\\C#\\.NET\\QuanLyKhachSan\\QLKS\\FormChinh.cs",
+              "RelativeDocumentMoniker": "QLKS\\FormChinh.cs",
+              "ToolTip": "D:\\Code\\code\\C#\\.NET\\QuanLyKhachSan\\QLKS\\FormChinh.cs",
+              "RelativeToolTip": "QLKS\\FormChinh.cs",
+              "ViewState": "AgIAAEgAAAAAAAAAAAA+wGAAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-09T15:12:35.756Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ThongKe.cs [Design]",
+              "DocumentMoniker": "D:\\Code\\code\\C#\\.NET\\QuanLyKhachSan\\QLKS\\ThongKe.cs",
+              "RelativeDocumentMoniker": "QLKS\\ThongKe.cs",
+              "ToolTip": "D:\\Code\\code\\C#\\.NET\\QuanLyKhachSan\\QLKS\\ThongKe.cs [Design]",
+              "RelativeToolTip": "QLKS\\ThongKe.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-10T14:13:56.224Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "HoaDon.cs",
               "DocumentMoniker": "D:\\Code\\code\\C#\\.NET\\QuanLyKhachSan\\QLKS\\HoaDon.cs",
               "RelativeDocumentMoniker": "QLKS\\HoaDon.cs",
               "ToolTip": "D:\\Code\\code\\C#\\.NET\\QuanLyKhachSan\\QLKS\\HoaDon.cs",
               "RelativeToolTip": "QLKS\\HoaDon.cs",
-              "ViewState": "AgIAAOMAAAAAAAAAAAA0wC4BAABBAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAABcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-10T02:48:01.032Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-10T02:48:01.032Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 9,
+              "Title": "ThongKe.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Downloads\\QuanLyKhachSan_HqtCSDL-master\\QLKS\\ThongKe.cs",
+              "ToolTip": "C:\\Users\\Admin\\Downloads\\QuanLyKhachSan_HqtCSDL-master\\QLKS\\ThongKe.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-10T14:11:48.3Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
               "Title": "Khach.cs",
               "DocumentMoniker": "D:\\Code\\code\\C#\\.NET\\QuanLyKhachSan\\QLKS\\Khach.cs",
               "RelativeDocumentMoniker": "QLKS\\Khach.cs",
@@ -180,86 +234,31 @@
               "RelativeToolTip": "QLKS\\Khach.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-09T20:00:53.189Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-09T20:00:53.189Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "DoiMatKhau.cs",
-              "DocumentMoniker": "D:\\Code\\code\\C#\\.NET\\QuanLyKhachSan\\QLKS\\DoiMatKhau.cs",
-              "RelativeDocumentMoniker": "QLKS\\DoiMatKhau.cs",
-              "ToolTip": "D:\\Code\\code\\C#\\.NET\\QuanLyKhachSan\\QLKS\\DoiMatKhau.cs",
-              "RelativeToolTip": "QLKS\\DoiMatKhau.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-09T20:00:37.624Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "DichVu.cs",
-              "DocumentMoniker": "D:\\Code\\code\\C#\\.NET\\QuanLyKhachSan\\QLKS\\DichVu.cs",
-              "RelativeDocumentMoniker": "QLKS\\DichVu.cs",
-              "ToolTip": "D:\\Code\\code\\C#\\.NET\\QuanLyKhachSan\\QLKS\\DichVu.cs",
-              "RelativeToolTip": "QLKS\\DichVu.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAADwvxMAAABaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-09T20:00:33.192Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "DatPhong.cs",
-              "DocumentMoniker": "D:\\Code\\code\\C#\\.NET\\QuanLyKhachSan\\QLKS\\DatPhong.cs",
-              "RelativeDocumentMoniker": "QLKS\\DatPhong.cs",
-              "ToolTip": "D:\\Code\\code\\C#\\.NET\\QuanLyKhachSan\\QLKS\\DatPhong.cs",
-              "RelativeToolTip": "QLKS\\DatPhong.cs",
-              "ViewState": "AgIAAJEAAAAAAAAAAAAzwFIAAAB9AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-09T20:00:28.202Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "DangNhap.cs",
-              "DocumentMoniker": "D:\\Code\\code\\C#\\.NET\\QuanLyKhachSan\\QLKS\\DangNhap.cs",
-              "RelativeDocumentMoniker": "QLKS\\DangNhap.cs",
-              "ToolTip": "D:\\Code\\code\\C#\\.NET\\QuanLyKhachSan\\QLKS\\DangNhap.cs",
-              "RelativeToolTip": "QLKS\\DangNhap.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAADwvxQAAABbAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-09T20:00:20.216Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 10,
               "Title": "ThanhToan.cs",
               "DocumentMoniker": "D:\\Code\\code\\C#\\.NET\\QuanLyKhachSan\\QLKS\\ThanhToan.cs",
               "RelativeDocumentMoniker": "QLKS\\ThanhToan.cs",
               "ToolTip": "D:\\Code\\code\\C#\\.NET\\QuanLyKhachSan\\QLKS\\ThanhToan.cs",
               "RelativeToolTip": "QLKS\\ThanhToan.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAABCAAAAAAAAAA==",
+              "ViewState": "AgIAACUBAAAAAAAAAAAAAF8BAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-09T17:49:23.408Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-09T17:49:23.408Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "FormChinh.cs",
-              "DocumentMoniker": "D:\\Code\\code\\C#\\.NET\\QuanLyKhachSan\\QLKS\\FormChinh.cs",
-              "RelativeDocumentMoniker": "QLKS\\FormChinh.cs",
-              "ToolTip": "D:\\Code\\code\\C#\\.NET\\QuanLyKhachSan\\QLKS\\FormChinh.cs",
-              "RelativeToolTip": "QLKS\\FormChinh.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAF8AAAAAAAAAAAAAAA==",
+              "DocumentIndex": 15,
+              "Title": "DichVu.cs",
+              "DocumentMoniker": "D:\\Code\\code\\C#\\.NET\\QuanLyKhachSan\\QLKS\\DichVu.cs",
+              "RelativeDocumentMoniker": "QLKS\\DichVu.cs",
+              "ToolTip": "D:\\Code\\code\\C#\\.NET\\QuanLyKhachSan\\QLKS\\DichVu.cs",
+              "RelativeToolTip": "QLKS\\DichVu.cs",
+              "ViewState": "AgIAAEYBAAAAAAAAAAAzwFoBAABMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-09T15:12:35.756Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-09T20:00:33.192Z"
             },
             {
               "$type": "Document",
@@ -271,49 +270,92 @@
               "RelativeToolTip": "QLKS\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-09T15:06:42.304Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-09T15:06:42.304Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "NhanVien.cs",
+              "DocumentMoniker": "D:\\Code\\code\\C#\\.NET\\QuanLyKhachSan\\QLKS\\NhanVien.cs",
+              "RelativeDocumentMoniker": "QLKS\\NhanVien.cs",
+              "ToolTip": "D:\\Code\\code\\C#\\.NET\\QuanLyKhachSan\\QLKS\\NhanVien.cs*",
+              "RelativeToolTip": "QLKS\\NhanVien.cs*",
+              "ViewState": "AgIAAJ8BAAAAAAAAAAA0wM8BAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-09T20:00:55.493Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "FormChinh.cs [Design]",
+              "DocumentMoniker": "D:\\Code\\code\\C#\\.NET\\QuanLyKhachSan\\QLKS\\FormChinh.cs",
+              "RelativeDocumentMoniker": "QLKS\\FormChinh.cs",
+              "ToolTip": "D:\\Code\\code\\C#\\.NET\\QuanLyKhachSan\\QLKS\\FormChinh.cs [Design]",
+              "RelativeToolTip": "QLKS\\FormChinh.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-09T15:04:03.938Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ThongKe.cs",
+              "DocumentMoniker": "D:\\Code\\code\\C#\\.NET\\QuanLyKhachSan\\QLKS\\ThongKe.cs",
+              "RelativeDocumentMoniker": "QLKS\\ThongKe.cs",
+              "ToolTip": "D:\\Code\\code\\C#\\.NET\\QuanLyKhachSan\\QLKS\\ThongKe.cs",
+              "RelativeToolTip": "QLKS\\ThongKe.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAABcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-10T14:17:45.929Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "DatPhong.cs",
+              "DocumentMoniker": "D:\\Code\\code\\C#\\.NET\\QuanLyKhachSan\\QLKS\\DatPhong.cs",
+              "RelativeDocumentMoniker": "QLKS\\DatPhong.cs",
+              "ToolTip": "D:\\Code\\code\\C#\\.NET\\QuanLyKhachSan\\QLKS\\DatPhong.cs",
+              "RelativeToolTip": "QLKS\\DatPhong.cs",
+              "ViewState": "AgIAAJEAAAAAAAAAAAAzwFIAAAB9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-09T20:00:28.202Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "DangNhap.cs",
+              "DocumentMoniker": "D:\\Code\\code\\C#\\.NET\\QuanLyKhachSan\\QLKS\\DangNhap.cs",
+              "RelativeDocumentMoniker": "QLKS\\DangNhap.cs",
+              "ToolTip": "D:\\Code\\code\\C#\\.NET\\QuanLyKhachSan\\QLKS\\DangNhap.cs",
+              "RelativeToolTip": "QLKS\\DangNhap.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAADwvyMAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-09T20:00:20.216Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
               "Title": "DangNhap.cs [Design]",
               "DocumentMoniker": "D:\\Code\\code\\C#\\.NET\\QuanLyKhachSan\\QLKS\\DangNhap.cs",
               "RelativeDocumentMoniker": "QLKS\\DangNhap.cs",
               "ToolTip": "D:\\Code\\code\\C#\\.NET\\QuanLyKhachSan\\QLKS\\DangNhap.cs [Design]",
               "RelativeToolTip": "QLKS\\DangNhap.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-09T15:04:09.93Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-12-09T15:04:09.93Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 16,
               "Title": "DatPhong.cs [Design]",
               "DocumentMoniker": "D:\\Code\\code\\C#\\.NET\\QuanLyKhachSan\\QLKS\\DatPhong.cs",
               "RelativeDocumentMoniker": "QLKS\\DatPhong.cs",
               "ToolTip": "D:\\Code\\code\\C#\\.NET\\QuanLyKhachSan\\QLKS\\DatPhong.cs [Design]",
               "RelativeToolTip": "QLKS\\DatPhong.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-09T15:04:09.337Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-12-09T15:04:09.337Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "NhanVien.cs",
-              "DocumentMoniker": "D:\\Code\\code\\C#\\.NET\\QuanLyKhachSan\\QLKS\\NhanVien.cs",
-              "RelativeDocumentMoniker": "QLKS\\NhanVien.cs",
-              "ToolTip": "D:\\Code\\code\\C#\\.NET\\QuanLyKhachSan\\QLKS\\NhanVien.cs",
-              "RelativeToolTip": "QLKS\\NhanVien.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAADwvxMAAABaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-09T20:00:55.493Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 17,
               "Title": "Phong.cs",
               "DocumentMoniker": "D:\\Code\\code\\C#\\.NET\\QuanLyKhachSan\\QLKS\\Phong.cs",
               "RelativeDocumentMoniker": "QLKS\\Phong.cs",
@@ -321,80 +363,62 @@
               "RelativeToolTip": "QLKS\\Phong.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAADwvxQAAABbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-09T20:01:01.077Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-09T20:01:01.077Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 19,
               "Title": "DichVu.cs [Design]",
               "DocumentMoniker": "D:\\Code\\code\\C#\\.NET\\QuanLyKhachSan\\QLKS\\DichVu.cs",
               "RelativeDocumentMoniker": "QLKS\\DichVu.cs",
               "ToolTip": "D:\\Code\\code\\C#\\.NET\\QuanLyKhachSan\\QLKS\\DichVu.cs [Design]",
               "RelativeToolTip": "QLKS\\DichVu.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-09T15:04:08.685Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-12-09T15:04:08.685Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 20,
               "Title": "DoiMatKhau.cs [Design]",
               "DocumentMoniker": "D:\\Code\\code\\C#\\.NET\\QuanLyKhachSan\\QLKS\\DoiMatKhau.cs",
               "RelativeDocumentMoniker": "QLKS\\DoiMatKhau.cs",
               "ToolTip": "D:\\Code\\code\\C#\\.NET\\QuanLyKhachSan\\QLKS\\DoiMatKhau.cs [Design]",
               "RelativeToolTip": "QLKS\\DoiMatKhau.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-09T15:04:08.067Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-12-09T15:04:08.067Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 21,
               "Title": "Khach.cs [Design]",
               "DocumentMoniker": "D:\\Code\\code\\C#\\.NET\\QuanLyKhachSan\\QLKS\\Khach.cs",
               "RelativeDocumentMoniker": "QLKS\\Khach.cs",
               "ToolTip": "D:\\Code\\code\\C#\\.NET\\QuanLyKhachSan\\QLKS\\Khach.cs [Design]",
               "RelativeToolTip": "QLKS\\Khach.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-09T15:04:07.065Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-12-09T15:04:07.065Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 22,
               "Title": "Phong.cs [Design]",
               "DocumentMoniker": "D:\\Code\\code\\C#\\.NET\\QuanLyKhachSan\\QLKS\\Phong.cs",
               "RelativeDocumentMoniker": "QLKS\\Phong.cs",
               "ToolTip": "D:\\Code\\code\\C#\\.NET\\QuanLyKhachSan\\QLKS\\Phong.cs [Design]",
               "RelativeToolTip": "QLKS\\Phong.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-09T15:04:06.107Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-12-09T15:04:06.107Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "FormChinh.cs [Design]",
-              "DocumentMoniker": "D:\\Code\\code\\C#\\.NET\\QuanLyKhachSan\\QLKS\\FormChinh.cs",
-              "RelativeDocumentMoniker": "QLKS\\FormChinh.cs",
-              "ToolTip": "D:\\Code\\code\\C#\\.NET\\QuanLyKhachSan\\QLKS\\FormChinh.cs [Design]",
-              "RelativeToolTip": "QLKS\\FormChinh.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-09T15:04:03.938Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 18,
               "Title": "ThanhToan.cs [Design]",
               "DocumentMoniker": "D:\\Code\\code\\C#\\.NET\\QuanLyKhachSan\\QLKS\\ThanhToan.cs",
               "RelativeDocumentMoniker": "QLKS\\ThanhToan.cs",
               "ToolTip": "D:\\Code\\code\\C#\\.NET\\QuanLyKhachSan\\QLKS\\ThanhToan.cs [Design]",
               "RelativeToolTip": "QLKS\\ThanhToan.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-09T15:04:05.129Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-12-09T15:04:05.129Z"
             }
           ]
         },

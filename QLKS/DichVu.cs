@@ -91,7 +91,8 @@ namespace QLKS
             JOIN DATPHONG DP ON DP.MADATPH = SD.MADATPH
             JOIN KHACH KH ON KH.MAKH = DP.MAKH
             JOIN DICHVU DV ON DV.MADV = SD.MADV
-            JOIN NHANVIEN NV ON NV.MANV = SD.MANV";
+            JOIN NHANVIEN NV ON NV.MANV = SD.MANV 
+            WHERE SD.TRANGTHAI  NOT IN (N'Đã hoàn thành')";
 
                 SqlCommand cmd = new SqlCommand(query, conn);
                 SqlDataReader rd = cmd.ExecuteReader();
@@ -329,87 +330,47 @@ namespace QLKS
                 MessageBox.Show("Vui lòng chọn phòng và dịch vụ.");
                 return;
             }
+
             int maPhong = (int)cbPhongDat.SelectedValue;
             int maDichVu = (int)cbTenDichVu.SelectedValue;
             int soLuong = (int)numricSoLuong.Value;
             string ghiChu = txtGhiChu.Text.Trim();
+
             try
             {
                 if (conn.State == ConnectionState.Closed)
                     conn.Open();
+
+                // Lấy MADATPH
                 string getMaDatPhSql = @"SELECT TOP 1 MADATPH
-                                    FROM DATPHONG
-                                    WHERE MAPH = @MAPH
-                                    ORDER BY NGAYDAT DESC";
+                                        FROM DATPHONG
+                                        WHERE MAPH = 1 AND NGAYTRA IS NULL";
                 SqlCommand getMaDatPhCmd = new SqlCommand(getMaDatPhSql, conn);
                 getMaDatPhCmd.Parameters.AddWithValue("@MAPH", maPhong);
+
                 object result = getMaDatPhCmd.ExecuteScalar();
                 if (result == null)
                 {
                     MessageBox.Show("Không tìm thấy đặt phòng cho phòng đã chọn.");
                     return;
                 }
+
                 int maDatPh = (int)result;
-                string checkSql = @"SELECT SOLUONG FROM SUDUNGDV 
-                            WHERE MADATPH = @MADATPH AND MADV = @MADV";
-                SqlCommand checkCmd = new SqlCommand(checkSql, conn);
-                checkCmd.Parameters.AddWithValue("@MADATPH", maDatPh);
-                checkCmd.Parameters.AddWithValue("@MADV", maDichVu);
-                object checkResult = checkCmd.ExecuteScalar();
-                if(checkResult == null)
-                {
-                    if(soLuong <= 0)
-                    {
-                        MessageBox.Show("Số lượng phải lớn hơn 0.");
-                        return;
-                    }
-                    string insertSql = @"INSERT INTO SUDUNGDV (MADATPH, MADV, MANV ,SOLUONG, GHICHU)
-                                 VALUES (@MADATPH, @MADV,@MANV ,@SOLUONG, @GHICHU)";
-                    SqlCommand insertCmd = new SqlCommand(insertSql, conn);
-                    insertCmd.Parameters.AddWithValue("@MADATPH", maDatPh);
-                    insertCmd.Parameters.AddWithValue("@MADV", maDichVu);
-                    insertCmd.Parameters.AddWithValue("@MANV", Account.Current.MaNV);
-                    insertCmd.Parameters.AddWithValue("@SOLUONG", soLuong);
-                    insertCmd.Parameters.AddWithValue("@GHICHU", ghiChu);
-                    insertCmd.ExecuteNonQuery();
-                    MessageBox.Show("Thêm sử dụng dịch vụ thành công!");
-                }
-                else
-                {
-                    int soLuongCu = (int)checkResult;
-                    int soLuongMoi = soLuongCu + soLuong;
-                    if (soLuongMoi <= 0)
-                    {
-                        string deleteSql = @"DELETE FROM SUDUNGDV 
-                                     WHERE MADATPH = @MADATPH AND MADV = @MADV AND MANV = @MANV";
 
-                        SqlCommand deleteCmd = new SqlCommand(deleteSql, conn);
-                        deleteCmd.Parameters.AddWithValue("@MADATPH", maDatPh);
-                        deleteCmd.Parameters.AddWithValue("@MADV", maDichVu);
-                        deleteCmd.Parameters.AddWithValue("@MANV", Account.Current.MaNV);
+                // GỌI STORE PROCEDURE
+                SqlCommand cmd = new SqlCommand("sp_CapNhatDichVuPhong", conn);
+                cmd.CommandType = CommandType.StoredProcedure;
 
-                        deleteCmd.ExecuteNonQuery();
-                        MessageBox.Show("Đã xóa dịch vụ do số lượng <= 0.");
-                    }
-                    else
-                    {
-                        string updateSql = @"UPDATE SUDUNGDV
-                                     SET SOLUONG = @SOLUONG, GHICHU = @GHICHU
-                                     WHERE MADATPH = @MADATPH AND MADV = @MADV AND MANV = @MANV";
+                cmd.Parameters.AddWithValue("@MADATPH", maDatPh);
+                cmd.Parameters.AddWithValue("@MADV", maDichVu);
+                cmd.Parameters.AddWithValue("@MANV", Account.Current.MaNV);
+                cmd.Parameters.AddWithValue("@SOLUONG", soLuong);
+                cmd.Parameters.AddWithValue("@GHICHU", ghiChu);
 
-                        SqlCommand updateCmd = new SqlCommand(updateSql, conn);
-                        updateCmd.Parameters.AddWithValue("@SOLUONG", soLuongMoi);
-                        updateCmd.Parameters.AddWithValue("@GHICHU", ghiChu);
-                        updateCmd.Parameters.AddWithValue("@MADATPH", maDatPh);
-                        updateCmd.Parameters.AddWithValue("@MADV", maDichVu);
-                        updateCmd.Parameters.AddWithValue("@MANV", Account.Current.MaNV);
+                cmd.ExecuteNonQuery();
 
-                        updateCmd.ExecuteNonQuery();
-                        MessageBox.Show("Cập nhật số lượng dịch vụ thành công!");
-                    }
-                }
+                MessageBox.Show("Thực hiện thành công!");
                 LoadSuDungDV();
-
             }
             catch (Exception ex)
             {
@@ -418,7 +379,7 @@ namespace QLKS
             finally
             {
                 conn.Close();
-            }
+            }   
         }
 
         private void btnLuu_Click(object sender, EventArgs e)
