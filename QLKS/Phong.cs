@@ -35,7 +35,21 @@ namespace QLKS
             lstVPhong.Columns[1].Width = (int)(tongWidth * 0.15);
             lstVPhong.Columns[2].Width = (int)(tongWidth * 0.36);
             lstVPhong.Columns[3].Width = (int)(tongWidth * 0.2);
-        }
+            if (Account.Current.VaiTro != "Quản trị viên")
+            {
+                txtSoLuong.Enabled = false;
+                txtGia.Enabled = false;
+                txtSoPhong.Enabled = false;
+                txtTenLoai.Enabled = false;
+                btnSuaLoai.Enabled = false;
+                btnSuaPhong.Enabled = false;
+                btnThemLoai.Enabled = false;
+                btnThemPhong.Enabled = false;
+                btnXoaLoai.Enabled = false;
+                btnXoaPhong.Enabled = false;
+                cbLoaiPhong.Enabled = false;
+            }
+            }
         void LoadLoaiPhong()
         {
             try

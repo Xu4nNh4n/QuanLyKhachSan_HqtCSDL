@@ -16,6 +16,11 @@ namespace QLKS
         public FormChinh()
         {
             InitializeComponent();
+            if(Account.Current.VaiTro != "Quản trị viên")
+            {
+                btnNhanVien.Visible = false;
+                btnThongKe.Visible = false;
+            }
         }
         private void OpenChildForm(Form childForm)
         {
@@ -77,7 +82,8 @@ namespace QLKS
 
         private void btnDoiMatKhau_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new DoiMatKhau());
+            DoiMatKhau doiMatKhau = new DoiMatKhau();
+            doiMatKhau.ShowDialog();
         }
 
         private void btnDangXuat_Click(object sender, EventArgs e)

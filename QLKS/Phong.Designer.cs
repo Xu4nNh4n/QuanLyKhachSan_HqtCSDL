@@ -29,8 +29,17 @@
         private void InitializeComponent()
         {
             this.lstVPhong = new System.Windows.Forms.ListView();
+            this.colMaPh = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colSoPhong = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colTenLP = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colTrangThai = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.lstVLoaiPhong = new System.Windows.Forms.ListView();
+            this.colMaLoai = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colTenLoai = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colGia = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colSoLuong = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.gbThemPhong = new System.Windows.Forms.GroupBox();
+            this.cbLoaiPhong = new System.Windows.Forms.ComboBox();
             this.btnSuaPhong = new System.Windows.Forms.Button();
             this.btnXoaPhong = new System.Windows.Forms.Button();
             this.btnThemPhong = new System.Windows.Forms.Button();
@@ -52,15 +61,6 @@
             this.radPhong = new System.Windows.Forms.RadioButton();
             this.btnTimKiem = new System.Windows.Forms.Button();
             this.txtTimKiem = new System.Windows.Forms.TextBox();
-            this.colMaLoai = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.colTenLoai = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.colGia = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.colSoLuong = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.colMaPh = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.colSoPhong = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.colTenLP = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.colTrangThai = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.cbLoaiPhong = new System.Windows.Forms.ComboBox();
             this.gbThemPhong.SuspendLayout();
             this.grbLoaiPhong.SuspendLayout();
             this.grbTimKiem.SuspendLayout();
@@ -80,11 +80,27 @@
             this.lstVPhong.Location = new System.Drawing.Point(0, 0);
             this.lstVPhong.Margin = new System.Windows.Forms.Padding(4);
             this.lstVPhong.Name = "lstVPhong";
-            this.lstVPhong.Size = new System.Drawing.Size(285, 546);
+            this.lstVPhong.Size = new System.Drawing.Size(285, 637);
             this.lstVPhong.TabIndex = 0;
             this.lstVPhong.UseCompatibleStateImageBehavior = false;
             this.lstVPhong.View = System.Windows.Forms.View.Details;
             this.lstVPhong.SelectedIndexChanged += new System.EventHandler(this.lstVPhong_SelectedIndexChanged);
+            // 
+            // colMaPh
+            // 
+            this.colMaPh.Text = "Mã";
+            // 
+            // colSoPhong
+            // 
+            this.colSoPhong.Text = "Phòng";
+            // 
+            // colTenLP
+            // 
+            this.colTenLP.Text = "Tên loại";
+            // 
+            // colTrangThai
+            // 
+            this.colTrangThai.Text = "Trạng Thái";
             // 
             // lstVLoaiPhong
             // 
@@ -99,11 +115,31 @@
             this.lstVLoaiPhong.Location = new System.Drawing.Point(293, 207);
             this.lstVLoaiPhong.Margin = new System.Windows.Forms.Padding(4);
             this.lstVLoaiPhong.Name = "lstVLoaiPhong";
-            this.lstVLoaiPhong.Size = new System.Drawing.Size(325, 339);
+            this.lstVLoaiPhong.Size = new System.Drawing.Size(391, 417);
             this.lstVLoaiPhong.TabIndex = 1;
             this.lstVLoaiPhong.UseCompatibleStateImageBehavior = false;
             this.lstVLoaiPhong.View = System.Windows.Forms.View.Details;
             this.lstVLoaiPhong.SelectedIndexChanged += new System.EventHandler(this.lstVLoaiPhong_SelectedIndexChanged);
+            // 
+            // colMaLoai
+            // 
+            this.colMaLoai.Text = "Mã loại";
+            this.colMaLoai.Width = 71;
+            // 
+            // colTenLoai
+            // 
+            this.colTenLoai.Text = "Tên loại";
+            this.colTenLoai.Width = 129;
+            // 
+            // colGia
+            // 
+            this.colGia.Text = "Giá";
+            this.colGia.Width = 65;
+            // 
+            // colSoLuong
+            // 
+            this.colSoLuong.Text = "Số lượng";
+            this.colSoLuong.Width = 89;
             // 
             // gbThemPhong
             // 
@@ -118,10 +154,18 @@
             this.gbThemPhong.Margin = new System.Windows.Forms.Padding(4);
             this.gbThemPhong.Name = "gbThemPhong";
             this.gbThemPhong.Padding = new System.Windows.Forms.Padding(4);
-            this.gbThemPhong.Size = new System.Drawing.Size(329, 183);
+            this.gbThemPhong.Size = new System.Drawing.Size(391, 183);
             this.gbThemPhong.TabIndex = 2;
             this.gbThemPhong.TabStop = false;
             this.gbThemPhong.Text = "Thêm phòng";
+            // 
+            // cbLoaiPhong
+            // 
+            this.cbLoaiPhong.FormattingEnabled = true;
+            this.cbLoaiPhong.Location = new System.Drawing.Point(120, 78);
+            this.cbLoaiPhong.Name = "cbLoaiPhong";
+            this.cbLoaiPhong.Size = new System.Drawing.Size(205, 25);
+            this.cbLoaiPhong.TabIndex = 7;
             // 
             // btnSuaPhong
             // 
@@ -189,7 +233,7 @@
             this.grbLoaiPhong.Controls.Add(this.txtSoLuong);
             this.grbLoaiPhong.Controls.Add(this.label3);
             this.grbLoaiPhong.Controls.Add(this.label4);
-            this.grbLoaiPhong.Location = new System.Drawing.Point(633, 16);
+            this.grbLoaiPhong.Location = new System.Drawing.Point(696, 16);
             this.grbLoaiPhong.Margin = new System.Windows.Forms.Padding(4);
             this.grbLoaiPhong.Name = "grbLoaiPhong";
             this.grbLoaiPhong.Padding = new System.Windows.Forms.Padding(4);
@@ -282,9 +326,9 @@
             this.grbTimKiem.Controls.Add(this.radPhong);
             this.grbTimKiem.Controls.Add(this.btnTimKiem);
             this.grbTimKiem.Controls.Add(this.txtTimKiem);
-            this.grbTimKiem.Location = new System.Drawing.Point(633, 270);
+            this.grbTimKiem.Location = new System.Drawing.Point(696, 270);
             this.grbTimKiem.Name = "grbTimKiem";
-            this.grbTimKiem.Size = new System.Drawing.Size(243, 264);
+            this.grbTimKiem.Size = new System.Drawing.Size(243, 354);
             this.grbTimKiem.TabIndex = 8;
             this.grbTimKiem.TabStop = false;
             this.grbTimKiem.Text = "Tìm kiếm";
@@ -328,55 +372,11 @@
             this.txtTimKiem.Size = new System.Drawing.Size(227, 23);
             this.txtTimKiem.TabIndex = 10;
             // 
-            // colMaLoai
-            // 
-            this.colMaLoai.Text = "Mã loại";
-            this.colMaLoai.Width = 71;
-            // 
-            // colTenLoai
-            // 
-            this.colTenLoai.Text = "Tên loại";
-            this.colTenLoai.Width = 129;
-            // 
-            // colGia
-            // 
-            this.colGia.Text = "Giá";
-            this.colGia.Width = 65;
-            // 
-            // colSoLuong
-            // 
-            this.colSoLuong.Text = "Số lượng";
-            this.colSoLuong.Width = 89;
-            // 
-            // colMaPh
-            // 
-            this.colMaPh.Text = "Mã";
-            // 
-            // colSoPhong
-            // 
-            this.colSoPhong.Text = "Phòng";
-            // 
-            // colTenLP
-            // 
-            this.colTenLP.Text = "Tên loại";
-            // 
-            // colTrangThai
-            // 
-            this.colTrangThai.Text = "Trạng Thái";
-            // 
-            // cbLoaiPhong
-            // 
-            this.cbLoaiPhong.FormattingEnabled = true;
-            this.cbLoaiPhong.Location = new System.Drawing.Point(120, 78);
-            this.cbLoaiPhong.Name = "cbLoaiPhong";
-            this.cbLoaiPhong.Size = new System.Drawing.Size(205, 25);
-            this.cbLoaiPhong.TabIndex = 7;
-            // 
             // Phong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(880, 546);
+            this.ClientSize = new System.Drawing.Size(1126, 637);
             this.Controls.Add(this.grbTimKiem);
             this.Controls.Add(this.grbLoaiPhong);
             this.Controls.Add(this.gbThemPhong);

@@ -17,3 +17,4 @@ D:\Code\code\C#\.NET\QuanLyKhachSan\QLKS\obj\Debug\QLKS.DatPhong.resources
 D:\Code\code\C#\.NET\QuanLyKhachSan\QLKS\obj\Debug\QLKS.ThanhToan.resources
 D:\Code\code\C#\.NET\QuanLyKhachSan\QLKS\obj\Debug\QLKS.HoaDon.resources
 D:\Code\code\C#\.NET\QuanLyKhachSan\QLKS\obj\Debug\QLKS.ThongKe.resources
+D:\Code\code\C#\.NET\QuanLyKhachSan\QLKS\obj\Debug\QLKS.DoiMatKhau.resources

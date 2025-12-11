@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             this.grbNut = new System.Windows.Forms.GroupBox();
-            this.btnXoaThongTin = new System.Windows.Forms.Button();
-            this.btnSuaThongTin = new System.Windows.Forms.Button();
             this.btnNhanPhong = new System.Windows.Forms.Button();
             this.btnDatPhong = new System.Windows.Forms.Button();
             this.lstVThongTin = new System.Windows.Forms.ListView();
@@ -77,8 +75,6 @@
             // 
             // grbNut
             // 
-            this.grbNut.Controls.Add(this.btnXoaThongTin);
-            this.grbNut.Controls.Add(this.btnSuaThongTin);
             this.grbNut.Controls.Add(this.btnNhanPhong);
             this.grbNut.Controls.Add(this.btnDatPhong);
             this.grbNut.Location = new System.Drawing.Point(698, 8);
@@ -87,24 +83,6 @@
             this.grbNut.TabIndex = 1;
             this.grbNut.TabStop = false;
             this.grbNut.Text = "Nút xử lý";
-            // 
-            // btnXoaThongTin
-            // 
-            this.btnXoaThongTin.Location = new System.Drawing.Point(87, 99);
-            this.btnXoaThongTin.Name = "btnXoaThongTin";
-            this.btnXoaThongTin.Size = new System.Drawing.Size(75, 67);
-            this.btnXoaThongTin.TabIndex = 3;
-            this.btnXoaThongTin.Text = "Xóa thông tin";
-            this.btnXoaThongTin.UseVisualStyleBackColor = true;
-            // 
-            // btnSuaThongTin
-            // 
-            this.btnSuaThongTin.Location = new System.Drawing.Point(6, 98);
-            this.btnSuaThongTin.Name = "btnSuaThongTin";
-            this.btnSuaThongTin.Size = new System.Drawing.Size(75, 67);
-            this.btnSuaThongTin.TabIndex = 2;
-            this.btnSuaThongTin.Text = "Sửa thông tin";
-            this.btnSuaThongTin.UseVisualStyleBackColor = true;
             // 
             // btnNhanPhong
             // 
@@ -472,8 +450,6 @@
         private System.Windows.Forms.ComboBox cbLoaiPhong;
         private System.Windows.Forms.TextBox txtQuocTich;
         private System.Windows.Forms.DateTimePicker dtPNgayNhan;
-        private System.Windows.Forms.Button btnXoaThongTin;
-        private System.Windows.Forms.Button btnSuaThongTin;
         private System.Windows.Forms.Button btnNhanPhong;
         private System.Windows.Forms.Button btnDatPhong;
         private System.Windows.Forms.ColumnHeader colMaKhach;

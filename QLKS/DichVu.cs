@@ -44,7 +44,14 @@ namespace QLKS
             cbTrangThai.Items.Add("Đã hoàn thành");
 
             cbTrangThai.SelectedIndex = 0; 
-
+            if(Account.Current.VaiTro != "Quản trị viên")
+            {
+                txtTenDichVu.Enabled = false;
+                txtDonGia.Enabled = false;
+                btnThem.Enabled = false;
+                btnXoa.Enabled = false;
+                btnSua.Enabled = false;
+            }    
         }
         void LoadDanhSachDichVu()
         {

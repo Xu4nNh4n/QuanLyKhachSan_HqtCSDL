@@ -41,6 +41,9 @@
             this.txtDonGia = new System.Windows.Forms.TextBox();
             this.txtTenDichVu = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnLuu = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.cbTrangThai = new System.Windows.Forms.ComboBox();
             this.btnXacNhan = new System.Windows.Forms.Button();
             this.cbPhongDat = new System.Windows.Forms.ComboBox();
             this.txtGhiChu = new System.Windows.Forms.TextBox();
@@ -58,9 +61,6 @@
             this.colSoLuong = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.colGhiChu = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.colTrangThai = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.cbTrangThai = new System.Windows.Forms.ComboBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.btnLuu = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numricSoLuong)).BeginInit();
@@ -79,7 +79,7 @@
             this.lstTTDichVu.Location = new System.Drawing.Point(0, 0);
             this.lstTTDichVu.Margin = new System.Windows.Forms.Padding(4);
             this.lstTTDichVu.Name = "lstTTDichVu";
-            this.lstTTDichVu.Size = new System.Drawing.Size(267, 546);
+            this.lstTTDichVu.Size = new System.Drawing.Size(331, 646);
             this.lstTTDichVu.TabIndex = 1;
             this.lstTTDichVu.UseCompatibleStateImageBehavior = false;
             this.lstTTDichVu.View = System.Windows.Forms.View.Details;
@@ -93,7 +93,7 @@
             // tenDichVu
             // 
             this.tenDichVu.Text = "Tên dịch vụ";
-            this.tenDichVu.Width = 86;
+            this.tenDichVu.Width = 114;
             // 
             // donGia
             // 
@@ -109,7 +109,7 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.txtDonGia);
             this.groupBox1.Controls.Add(this.txtTenDichVu);
-            this.groupBox1.Location = new System.Drawing.Point(275, 16);
+            this.groupBox1.Location = new System.Drawing.Point(339, 13);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
@@ -210,12 +210,43 @@
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.label1);
-            this.groupBox2.Location = new System.Drawing.Point(274, 190);
+            this.groupBox2.Location = new System.Drawing.Point(338, 187);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(593, 167);
             this.groupBox2.TabIndex = 12;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Đặt dịch vụ";
+            // 
+            // btnLuu
+            // 
+            this.btnLuu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnLuu.Location = new System.Drawing.Point(378, 110);
+            this.btnLuu.Margin = new System.Windows.Forms.Padding(4);
+            this.btnLuu.Name = "btnLuu";
+            this.btnLuu.Size = new System.Drawing.Size(204, 38);
+            this.btnLuu.TabIndex = 19;
+            this.btnLuu.Text = "Lưu";
+            this.btnLuu.UseVisualStyleBackColor = true;
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
+            // 
+            // label7
+            // 
+            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(366, 81);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(88, 17);
+            this.label7.TabIndex = 18;
+            this.label7.Text = "Trạng thái";
+            // 
+            // cbTrangThai
+            // 
+            this.cbTrangThai.FormattingEnabled = true;
+            this.cbTrangThai.Location = new System.Drawing.Point(461, 78);
+            this.cbTrangThai.Name = "cbTrangThai";
+            this.cbTrangThai.Size = new System.Drawing.Size(121, 25);
+            this.cbTrangThai.TabIndex = 17;
             // 
             // btnXacNhan
             // 
@@ -324,9 +355,9 @@
             this.lstVTTDatDichVu.FullRowSelect = true;
             this.lstVTTDatDichVu.GridLines = true;
             this.lstVTTDatDichVu.HideSelection = false;
-            this.lstVTTDatDichVu.Location = new System.Drawing.Point(275, 363);
+            this.lstVTTDatDichVu.Location = new System.Drawing.Point(339, 360);
             this.lstVTTDatDichVu.Name = "lstVTTDatDichVu";
-            this.lstVTTDatDichVu.Size = new System.Drawing.Size(593, 171);
+            this.lstVTTDatDichVu.Size = new System.Drawing.Size(652, 171);
             this.lstVTTDatDichVu.TabIndex = 13;
             this.lstVTTDatDichVu.UseCompatibleStateImageBehavior = false;
             this.lstVTTDatDichVu.View = System.Windows.Forms.View.Details;
@@ -360,42 +391,11 @@
             // 
             this.colTrangThai.Text = "Trạng thái";
             // 
-            // cbTrangThai
-            // 
-            this.cbTrangThai.FormattingEnabled = true;
-            this.cbTrangThai.Location = new System.Drawing.Point(461, 78);
-            this.cbTrangThai.Name = "cbTrangThai";
-            this.cbTrangThai.Size = new System.Drawing.Size(121, 25);
-            this.cbTrangThai.TabIndex = 17;
-            // 
-            // label7
-            // 
-            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(366, 81);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(88, 17);
-            this.label7.TabIndex = 18;
-            this.label7.Text = "Trạng thái";
-            // 
-            // btnLuu
-            // 
-            this.btnLuu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnLuu.Location = new System.Drawing.Point(378, 110);
-            this.btnLuu.Margin = new System.Windows.Forms.Padding(4);
-            this.btnLuu.Name = "btnLuu";
-            this.btnLuu.Size = new System.Drawing.Size(204, 38);
-            this.btnLuu.TabIndex = 19;
-            this.btnLuu.Text = "Lưu";
-            this.btnLuu.UseVisualStyleBackColor = true;
-            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
-            // 
             // DichVu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(880, 546);
+            this.ClientSize = new System.Drawing.Size(1003, 646);
             this.Controls.Add(this.lstVTTDatDichVu);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
